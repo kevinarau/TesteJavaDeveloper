@@ -26,9 +26,14 @@ public class Sistema {
 
 
         if (saqueEfetuado) {
-            System.out.println("Saque Efetuado pelo o cliente");
+            Transacao transacao = new Transacao(cliente, empresa, valorSaque, "saque");
+
         } else {
-            System.out.println(" Saldo empresa insuficiente ");
+
+            ServicoNotificacao servicoNotificacao = new ServicoNotificacao();
+
+            servicoNotificacao.notificarCliente(cliente, "Saque de R$" + valorSaque + " efetuado com sucesso.");
+
         }
 
         System.out.printf("Saldo empresa = " + em.getSaldo());
