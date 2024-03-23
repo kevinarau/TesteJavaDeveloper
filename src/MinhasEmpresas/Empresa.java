@@ -9,6 +9,9 @@ public class Empresa extends Pessoa {
     private double saldo = 0.0;
     private final Map<String,Double> taxa;
 
+    //Construtor para criar uma nova instância de Empresa.
+     //Parametro Nome da empresa.
+     // Parametro CNPJ da empresa.
 
 
     public Empresa(String nome, String cnpj) {
@@ -32,7 +35,9 @@ public class Empresa extends Pessoa {
         saldo += valor;
     }
 
-
+   // Método para realizar um saque na empresa.
+     // parametro  Valor a ser sacado.
+     //Retorno true se o saque foi bem-sucedido, false caso contrário.
     public boolean sacar(double valor) {
         double taxaSaque = getTaxa("saque");
         double valorComTaxa = valor + taxaSaque;
@@ -45,6 +50,9 @@ public class Empresa extends Pessoa {
             return false;
         }
     }
+
+    //Método para obter o retorno do saldo atual da empresa.
+
 
     public Object getSaldo() {
         return saldo;
