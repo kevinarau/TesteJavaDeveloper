@@ -10,8 +10,6 @@ public class Sistema {
 
     // Método principal que inicia a execução do sistema.
 
-
-
     public static  void main(String[] args) {
 
         Cliente cliente  = new Cliente("MeusClientes.Cliente", "524.645.635.98");

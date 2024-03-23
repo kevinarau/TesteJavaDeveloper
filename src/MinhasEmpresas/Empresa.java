@@ -37,7 +37,7 @@ public class Empresa extends Pessoa {
     }
 
    // Método para realizar um saque na empresa.
-     // parametro  Valor a ser sacado.
+     // Parametro Valor a ser sacado.
      //Retorno true se o saque foi bem-sucedido, false caso contrário.
     public boolean sacar(double valor) {
         double taxaSaque = getTaxa("saque");
