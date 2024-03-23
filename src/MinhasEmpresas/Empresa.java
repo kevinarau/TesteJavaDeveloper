@@ -1,5 +1,6 @@
 package MinhasEmpresas;
 
+
 import Usuario.Pessoa;
 import java.util.HashMap;
 import java.util.Map;
@@ -57,7 +58,20 @@ public class Empresa extends Pessoa {
     public Object getSaldo() {
         return saldo;
     }
-}
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
 
 
 
