@@ -24,21 +24,17 @@ public class Sistema {
 
         double valorDeposito = 100;
         empresa.depositar(valorDeposito);
-        double valoSaque = 70.0;
+
+        double valoSaque = 30.0;
         boolean saqueEfetuado = empresa.sacar(valoSaque);
 
 
 
         if (saqueEfetuado) {
-            Transacao transacao = new Transacao(cliente,empresa, valoSaque,"saque");
-
+            System.out.println("Saque efetuado com sucesso.");
 
         } else {
-            Notificacao servicoNotificacao = new Notificacao();
-            // Notifique o cliente sobre a transação
-
-
-            Notificacao.notificarCliente(cliente, "Saque de R$" + valoSaque + " efetuado com sucesso.");
+            System.out.println("Saldo insuficiente para o saque.");
 
         }
 
