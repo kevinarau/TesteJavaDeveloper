@@ -2,14 +2,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Empresa extends Pessoa{
-    private String cnpj;
-    private Map<String,Double> taxa;
+    private final String cnpj;
+    private double saldo = 0.0;
+    private final Map<String,Double> taxa;
 
 
 
     public Empresa(String nome, String cnpj) {
         super(nome, cnpj);
-        this.cnpj = cnpj;
+        this. cnpj = cnpj;
         this.taxa = new HashMap<>();
 
     }
@@ -25,14 +26,15 @@ public class Empresa extends Pessoa{
 
 
     public void depositar(double valor) {
-        double saldo = valor;
+        saldo += valor;
     }
 
 
     public boolean sacar(double valor) {
         double taxaSaque = getTaxa("saque");
         double valorComTaxa = valor + taxaSaque;
-        double saldo = 1000;
+        double saldo = 50.0;
+
         if (valorComTaxa <= saldo) {
             saldo -= valorComTaxa;
             return true;
@@ -41,8 +43,8 @@ public class Empresa extends Pessoa{
         }
     }
 
-    public String getSaldo() {
-        return null;
+    public Object getSaldo() {
+        return saldo;
     }
 }
 

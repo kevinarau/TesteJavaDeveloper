@@ -5,10 +5,13 @@ public class Sistema {
         Cliente cl = new Cliente("Cliente",  "524.645.635.98");
 
         Empresa em = new Empresa("Empresa", " 46.379 400 0001 55");
+        em.adicionarTaxa("saque",0.5);
 
-     double valorDeposito = 1000;
+
+
+     double valorDeposito = 100;
          em.depositar(valorDeposito);
-     double valoSaque = 300;
+     double valoSaque = 70.0;
         boolean saqueEfetuado = em.sacar(valoSaque);
 
 
@@ -19,7 +22,7 @@ public class Sistema {
          System.out.println(" Saldo empresa insuficiente ");
      }
 
-        System.out.printf("Saldo empresa = %s%n", em.getSaldo());
+        System.out.printf("Saldo empresa = " + em.getSaldo());
 
 
     }
