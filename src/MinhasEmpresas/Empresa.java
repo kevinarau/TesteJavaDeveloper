@@ -1,7 +1,10 @@
+package MinhasEmpresas;
+
+import Usuario.Pessoa;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Empresa extends Pessoa{
+public class Empresa extends Pessoa {
     private final String cnpj;
     private double saldo = 0.0;
     private final Map<String,Double> taxa;

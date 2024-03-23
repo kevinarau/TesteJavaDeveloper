@@ -1,11 +1,17 @@
+import MeusClientes.Cliente;
+import MinhasEmpresas.Empresa;
+
+
 public class Sistema {
 
     public static void main(String[] args) {
 
-        Cliente cl = new Cliente("Cliente", "524.645.635.98");
+        Cliente cl = new Cliente("MeusClientes.Cliente", "524.645.635.98");
 
-        Empresa em = new Empresa("Empresa", " 46.379 400 0001 55");
+        Empresa em = new Empresa("MinhasEmpresas.Empresa", " 46.379 400 0001 55");
         em.adicionarTaxa("saque", 0.5);
+
+
 
 
         double valorDeposito = 100;
